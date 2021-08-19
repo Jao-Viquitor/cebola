@@ -3,6 +3,8 @@
 Meu Primeiro Projeto em Flutter.
 
 ![](https://img.shields.io/badge/Vers%C3%A3o-Rascunho-red)
+![](https://img.shields.io/badge/IDE-Android%20Studio-blue)
+![](https://img.shields.io/badge/Linguagem-Dart-green)
 
 <h1 align="left">Descrição</h1>
 
