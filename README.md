@@ -1,6 +1,6 @@
 <h1 align="center">Cebola</h1>
 
-Meu Primeiro Projeto em Flutter.
+Meu Primeiro Projeto Flutter.
 
 ![](https://img.shields.io/badge/Vers%C3%A3o-Rascunho-red)
 ![](https://img.shields.io/badge/IDE-Android%20Studio-blue)
