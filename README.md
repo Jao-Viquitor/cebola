@@ -2,7 +2,7 @@
 
 Meu Primeiro Projeto em Flutter.
 
-https://img.shields.io/static/v1?label=<LABEL>&message=<MESSAGE>&color=<COLOR>
+![](https://img.shields.io/badge/Vers%C3%A3o-Rascunho-red)
 
 <h1 align="left">Descrição</h1>
 
