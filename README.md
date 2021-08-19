@@ -2,6 +2,8 @@
 
 Meu Primeiro Projeto em Flutter.
 
+https://img.shields.io/static/v1?label=<LABEL>&message=<MESSAGE>&color=<COLOR>
+
 <h1 align="left">Descrição</h1>
 
 <p>
