@@ -1,46 +1,47 @@
+import 'package:cebola/Routes/Routes.dart';
+import 'package:cebola/View/CadastrarNovo.dart';
+import 'package:cebola/View/TelaInicial.dart';
+import 'package:cebola/View/Widget/RodizioModelos.dart';
+import 'package:cebola/provider/RodiziosProvider.dart';
+
+import 'View/Home.dart';
+import 'package:cebola/View/Widget/CamposDeTexto.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'Model/Rodizio.dart';
+import 'View/Widget/Estilo.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(Aplicativo());
 }
 
-class MyApp extends StatelessWidget {
+class Aplicativo extends StatefulWidget {
+
+  @override
+  _AplicativoState createState() => _AplicativoState();
+
+}
+
+class _AplicativoState extends State<Aplicativo> {
+
+
+  TextEditingController _nomeController = TextEditingController();
+  var camposDeTextos = CamposDeTexto();
+  var estilo = Estilo();
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "",
-      home: Scaffold(
-        appBar: AppBar(
-        title: Text(''),
+    return ChangeNotifierProvider(create: (context) => RodoziosProvider(),
+      child: MaterialApp(
+        title: '',
+        routes: {
+          Routes.HOME: (_) => Home(),
+          Routes.TELA_INICIAL: (_) => TelaInicial(_nomeController.text),
+          Routes.CRIAR_RODIZIO: (_) => CadastrarNovo(_nomeController.text),
+        },
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          ElevatedButton(style: ElevatedButton.styleFrom(
-              primary: Color.fromRGBO(40, 31, 64, 100),
-              onPrimary: Color.fromRGBO(234, 275, 200, 100)
-          ),
-              onPressed: onPressed, child: Text("Sou Examinadora", style: TextStyle(color: Colors.white, fontSize: 20))),
-          ElevatedButton(style: ElevatedButton.styleFrom(
-              primary: Color.fromRGBO(40, 31, 64, 100),
-              onPrimary: Color.fromRGBO(234, 275, 200, 100)
-          ),
-              onPressed: onPressed, child: Text("Sou Instrutora", style: TextStyle(color: Colors.white, fontSize: 20))),
-          ElevatedButton(style: ElevatedButton.styleFrom(
-              primary: Color.fromRGBO(40, 31, 64, 100),
-              onPrimary: Color.fromRGBO(234, 275, 200, 100)
-          ),
-              onPressed: onPressed, child: Text("Sou Organista", style: TextStyle(color: Colors.white, fontSize: 20)))
-        ],
-
-      )
-      )
     );
   }
-
-
-  void onPressed() {
-  }
 }
-
 
